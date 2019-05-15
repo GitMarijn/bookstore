@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.5/dist/jquery.fancybox.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title> Ubiqum Bookstore </title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <header>
+                <div class="logoheader">
+                    <img class="logo" src="Images/01838a9bafa1216608adbb506e3d4d62.jpeg" alt="logo">
+                    <div class="headertext">
+                        <h1>Ubiqum</h1>
+                        <h1>Bookstore</h1>
+                    </div>
+                </div>
+
+                <div class=searchbar>
+                    <input v-model="search" class="form-control mr-sm-4" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </header>
+        </div>
+
+        <div class="flexcontainer">
+            <div v-for="book in filteredBooks" class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img :src="book.cover">
+                    </div>
+                    <div class="flip-box-back">
+                        <h3>{{book.title}}</h3>
+                        <span>{{book.description}}</span>
+                        <a class="button" :href="book.detail" data-fancybox="gallery" :data-caption="book.title">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.5/dist/jquery.fancybox.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

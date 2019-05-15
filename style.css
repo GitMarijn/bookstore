@@ -1,0 +1,110 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #5f9ea026;
+    border-radius: 4px;
+}
+
+.logoheader {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    max-height: 150px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar >input {
+    border-style: hidden;
+}
+
+.headertext {
+    align-self: center;
+    margin-left: 20px;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.flip-box-front img {
+    height: 100%;
+    width: 100%;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 250px;
+    height: 400px;
+    perspective: 1000px;
+    margin-bottom: 40px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-box-back {
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 10px;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
+    color: #008CBA;
+}
